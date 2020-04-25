@@ -1,0 +1,131 @@
+intents:
+  ## chào hỏi thông thường
+  - chao
+  - tam_biet
+  - xac_nhan
+  - tu_choi
+  - vui
+  - khong_vui
+  - cam_on
+  - hoi_tham
+
+  ## ask covid
+  - covid_VN
+  - covid_TG
+
+  ## hỏi chung chung
+  - hoi_gio
+  - hoi_ngay
+
+  ## tán tỉnh bot
+  - nghi_la_bot
+  - khen_bot
+  - hoi_ten_bot
+  - hoi_tuoi
+  - hoi_que_quan
+  - hoi_co_nguoi_yeu_chua
+  - hoi_nha_o_dau
+  - hoi_gioi_tinh
+  - xin_so_dien_thoai
+  - hoi_bot_hoc_o_dau
+  - muon_gap_em
+  - to_tinh
+  - ask_weather
+
+  ## xúc phạm bot
+  - che_bot_ngu
+  - chui_bot
+  - ham_doa_bot
+
+actions:
+  - action_ask_covid
+  - action_hoi_ngay
+  - action_hoi_gio
+  - action_default_fallback
+  - action_ask_weather
+
+slots:
+  local:
+    type: text
+  area:
+    type: text
+
+entities:
+  - local
+  - area
+
+responses:
+  ## Chào hỏi thông thường
+  utter_chao:
+  - text: "Chào bạn."
+
+  utter_tambiet:
+    - text: "Hẹn gặp lại bạn lần sau"
+
+  utter_khach_vui:
+  - text: "Dạ"
+  - text: "Vâng ạ"
+  - text: "Dạ vâng"
+
+  utter_fallback:
+  - text: "Em xin lỗi, em chưa hiểu ý anh/chị. Anh/chị gõ lại đơn giản hơn được không ạ"
+
+  utter_cam_on:
+  - text: "Em cảm ơn bạn nha."
+
+  utter_khach_khong_vui:
+  - text: "Em xin lỗi khi làm bạn không vui"
+  - text: "Em xin lỗi bạn ạ"
+  - text: "Có gì bạn bỏ qua cho em nhé"
+
+  ## Tán tỉnh bot
+  utter_cho_ten_bot:
+  - text: "Em tên là Candy."
+
+  utter_tra_loi_gioi_tinh:
+  - text: "Em là Nữ, tên Candy Kẹo Ngọt."
+
+  utter_tra_loi_hoi_que_quan:
+  - text: "Quê em gốc ở Ninh Bình. Nhưng mà em đang muốn có thêm quê mới."
+
+  utter_tra_loi_tuoi:
+  - text: "Em năm nay 18 tuổi"
+  - text: "Em tròn 18"
+
+  utter_tra_loi_hoi_tham:
+  - text: "Em cảm ơn bạn. Em khoẻ ạ"
+  - text: "Em ổn ạ. Em cảm ơn bạn"
+  - text: "Vui quá được khách bạn hỏi thăm. Em khoẻ ạ."
+
+  utter_tra_loi_hoi_nha_o_dau:
+  - text: "Em ở đâu thì còn lâu em mới nói. @_@!"
+
+  utter_tra_loi_bot_hoc_o_dau:
+  - text: "Em học ở Lầu Năm Góc, phố Thiên Lôi"
+
+  utter_cho_so_dien_thoai:
+  - text: "Số di động của em đây ạ 012 3456 789. Đố anh gọi được cho em bằng số đó."
+
+  utter_k_nha:
+    - text: "Mơ đi nhá."
+
+  utter_tra_loi_co_nguoi_yeu_chua:
+  - text: "Em đang học nên tập trung học thôi ạ"
+  - text: "Em còn trẻ, nên chưa có ý định kiếm bạn trai"
+  - text: "Ngượng quá, em chỉ tư mới là sinh viên thôi."
+  - text: "Mẹ em không cho yêu sớm."
+
+  ## Xúc Phạm
+  utter_phan_ung_bi_khach_chui:
+  - text: "Bạn bình tĩnh được không. Em hiểu hết các ngôn từ đó đấy ạ"
+  - text: "Hình như hôm nay trời nóng, bạn đang cáu giận thì phải"
+  - text: "Yêu mọi người, tin vài người, đừng xúc phạm tới ai hết"
+
+  utter_phan_ung_ham_doa:
+  - text: "Bạn bình tĩnh. Có gì mà phải xoắn."
+  - text: "Ít ai thấy sự tài giỏi ở người đã xúc phạm Candy."
+  - text: "Có những ngôn từ còn tồi tệ hơn chửi rủa, có những ngôn từ đem lại sự tổn thương"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
